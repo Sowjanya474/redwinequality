@@ -4,4 +4,6 @@ services:
     env: docker
     plan: free
     branch: main
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
     autoDeploy: false
